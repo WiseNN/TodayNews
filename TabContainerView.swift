@@ -10,12 +10,15 @@ import SwiftUI
 
 
 
-struct TabViewContainer: View {
+struct TabContainerView: View {
 	var body: some View {
 		TabView {
 			NewsFeedView()
 				.tabItem {
 					Text("News Feed")
+						.font(.title)
+						.foregroundStyle(.black)
+						.tint(.black)
 				}
 		}
 	}
@@ -23,5 +26,5 @@ struct TabViewContainer: View {
 
 
 #Preview {
-	TabViewContainer()
+	TabContainerView()
 }

@@ -62,7 +62,7 @@ struct NewsReaderView: View {
 				}
 				.padding([.leading, .trailing])
 				
-				WebView2(urlString: viewModel.article.url, didLoadContent: $didLoadContent, webHeight: $webHeight)
+				WebView(urlString: viewModel.article.url, didLoadContent: $didLoadContent, webHeight: $webHeight)
 			}
 		}
 		
