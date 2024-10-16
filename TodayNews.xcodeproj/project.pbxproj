@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D5365422CBFB6C00084A5FC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5365412CBFB6C00084A5FC /* Models.swift */; };
+		8D5365452CBFB9550084A5FC /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8D5365442CBFB9550084A5FC /* CachedAsyncImage */; };
 		8DC19D142CBE9B6500B44DE3 /* TodayNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D132CBE9B6500B44DE3 /* TodayNewsApp.swift */; };
 		8DC19D162CBE9B6500B44DE3 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D152CBE9B6500B44DE3 /* NewsFeedView.swift */; };
 		8DC19D182CBE9B6800B44DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC19D172CBE9B6800B44DE3 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		8DC19D252CBE9B6800B44DE3 /* TodayNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D242CBE9B6800B44DE3 /* TodayNewsTests.swift */; };
 		8DC19D2F2CBE9B6800B44DE3 /* TodayNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D2E2CBE9B6800B44DE3 /* TodayNewsUITests.swift */; };
 		8DC19D312CBE9B6800B44DE3 /* TodayNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D302CBE9B6800B44DE3 /* TodayNewsUITestsLaunchTests.swift */; };
+		8DC19D402CBECAEB00B44DE3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC19D3F2CBECAEB00B44DE3 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D5365412CBFB6C00084A5FC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		8DC19D102CBE9B6500B44DE3 /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC19D132CBE9B6500B44DE3 /* TodayNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsApp.swift; sourceTree = "<group>"; };
 		8DC19D152CBE9B6500B44DE3 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		8DC19D2A2CBE9B6800B44DE3 /* TodayNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC19D2E2CBE9B6800B44DE3 /* TodayNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsUITests.swift; sourceTree = "<group>"; };
 		8DC19D302CBE9B6800B44DE3 /* TodayNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DC19D3F2CBECAEB00B44DE3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5365452CBFB9550084A5FC /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +100,10 @@
 		8DC19D122CBE9B6500B44DE3 /* TodayNews */ = {
 			isa = PBXGroup;
 			children = (
+				8DC19D3F2CBECAEB00B44DE3 /* ViewModel.swift */,
 				8DC19D132CBE9B6500B44DE3 /* TodayNewsApp.swift */,
 				8DC19D152CBE9B6500B44DE3 /* NewsFeedView.swift */,
+				8D5365412CBFB6C00084A5FC /* Models.swift */,
 				8DC19D172CBE9B6800B44DE3 /* Assets.xcassets */,
 				8DC19D192CBE9B6800B44DE3 /* Preview Content */,
 			);
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = TodayNews;
+			packageProductDependencies = (
+				8D5365442CBFB9550084A5FC /* CachedAsyncImage */,
+			);
 			productName = TodayNews;
 			productReference = 8DC19D102CBE9B6500B44DE3 /* TodayNews.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 8DC19D072CBE9B6500B44DE3;
+			packageReferences = (
+				8D5365432CBFB8B50084A5FC /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 8DC19D112CBE9B6500B44DE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC19D162CBE9B6500B44DE3 /* NewsFeedView.swift in Sources */,
+				8DC19D402CBECAEB00B44DE3 /* ViewModel.swift in Sources */,
 				8DC19D142CBE9B6500B44DE3 /* TodayNewsApp.swift in Sources */,
+				8D5365422CBFB6C00084A5FC /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D5365432CBFB8B50084A5FC /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D5365442CBFB9550084A5FC /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D5365432CBFB8B50084A5FC /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DC19D082CBE9B6500B44DE3 /* Project object */;
 }
