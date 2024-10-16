@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+
+class NewsReaderViewModel: ObservableObject, ArticleUtilities {
+	var article: Article
+	
+	
+	init(article: Article) {
+		self.article = article
+	}
+}

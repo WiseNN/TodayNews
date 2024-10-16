@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class NewsFeedViewModel: ObservableObject {
+class NewsFeedViewModel: ObservableObject, ArticleUtilities {
 	@Published var pageTitle = "Latest"
 	@Published var seeMoreBtnTitle = "See all"
 	@Published var categories: [String] = []
@@ -58,6 +58,17 @@ class NewsFeedViewModel: ObservableObject {
 			}
 		}
 	}
+	
+}
+
+
+
+
+protocol ArticleUtilities {
+	func getShortAuthor(_ author: String?) -> String
+}
+
+extension ArticleUtilities {
 	func getShortAuthor(_ author: String?) -> String {
 		if let author {
 			let this = "\(author.prefix(6))".replacingOccurrences(of: #"[-!@$#%^&*()_+=]"#, with: "", options: .regularExpression)
@@ -65,5 +76,11 @@ class NewsFeedViewModel: ObservableObject {
 		} else {
 			return "Unlisted"
 		}
+	}
+	
+	func generateLoremText(wordCount: Int) -> String {
+		(0...wordCount).map { _ in
+			Int.random(in: 1...5) > 2  ? "lorem" : "ipsum"
+		}.joined(separator: " ")
 	}
 }
