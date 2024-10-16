@@ -30,7 +30,7 @@ enum NewsAPI {
 
 
 struct NewsFeedView: View {
-	@ObservedObject var viewModel = ViewModel()
+	@ObservedObject var viewModel = NewsFeedViewModel()
 	
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -65,18 +65,21 @@ struct NewsFeedView: View {
 					CachedAsyncImage(url: URL(string: article.urlToImage ?? ""), urlCache: .imageCache) { img in
 						let image = img.image ?? Image("bbcNewsImage")
 
-						return image
+						image
 							.resizable()
-							.frame(width: 100, height: 100)
+							.frame(width: 90, height: 90)
+							.clipShape(RoundedRectangle(cornerRadius: 10))
 					}
 					
 					
 					VStack(alignment: .leading) {
-						Text(article.title ?? "--")
+						Text(viewModel.getShortAuthor(article.author))
 							.font(.custom("Poppins", size: 18))
+							.foregroundStyle(.gray)
+							
 						
 						Text(article.title ?? "[missing article]")
-							.lineLimit(2)
+							.lineLimit(2, reservesSpace: true)
 							.padding(.trailing)
 						HStack {
 							Image("bbcNewsImage")
@@ -94,6 +97,7 @@ struct NewsFeedView: View {
 						
 					}
 				}
+				.frame(height: 112)
 			}
 			.refreshable {
 				Task {

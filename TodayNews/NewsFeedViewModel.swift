@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ViewModel: ObservableObject {
+class NewsFeedViewModel: ObservableObject {
 	@Published var pageTitle = "Latest"
 	@Published var seeMoreBtnTitle = "See all"
 	@Published var categories: [String] = []
@@ -56,6 +56,14 @@ class ViewModel: ObservableObject {
 					}
 				
 			}
+		}
+	}
+	func getShortAuthor(_ author: String?) -> String {
+		if let author {
+			let this = "\(author.prefix(6))".replacingOccurrences(of: #"[-!@$#%^&*()_+=]"#, with: "", options: .regularExpression)
+			return this
+		} else {
+			return "Unlisted"
 		}
 	}
 }

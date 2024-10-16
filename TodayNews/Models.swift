@@ -42,6 +42,7 @@ struct Article: Codable, Identifiable {
 		publishedAt,
 		content
 	}
+	
 }
 
 struct Source: Codable {
