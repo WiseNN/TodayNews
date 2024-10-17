@@ -14,7 +14,7 @@ struct TodayNewsApp: App {
 	let nrViewModel = NewsReaderViewModel(article: Article(source: Source()))
     var body: some Scene {
         WindowGroup {
-			NewsFeedView()
+			TabContainerView()
         }
     }
 }

@@ -55,7 +55,7 @@ struct NewsReaderView: View {
 				Image("newsStoryImage")
 					.aspectRatio(2/1, contentMode: .fill)
 				HStack {
-					Text(viewModel.getShortAuthor(viewModel.article.author))
+					Text(ArticleUtilities.shared.getShortAuthor(viewModel.article.author))
 						.font(.custom("Poppins", size: 18))
 						.foregroundStyle(.gray)
 					Spacer()
@@ -72,5 +72,5 @@ let nrViewModel = NewsReaderViewModel(article: Article(source: Source()))
 
 
 #Preview {
-	NewsReaderView(viewModel: NewsReaderViewModel(article: Article(id: UUID(), source: Source(id: "cnn", name: "cnn"), author: "Stacey", title: "COVID-Recovery", description: nrViewModel.generateLoremText(wordCount: 20), url: "https://www.cnn.com/2024/10/14/sport/nfl-week-6-sunday-review-spt-intl/index.html", urlToImage: nil, publishedAt: nil, content: nrViewModel.generateLoremText(wordCount: 200))))
+	NewsReaderView(viewModel: NewsReaderViewModel(article: Article(id: UUID(), source: Source(id: "cnn", name: "cnn"), author: "Stacey", title: "COVID-Recovery", description: ArticleUtilities.shared.generateLoremText(wordCount: 20), url: "https://www.cnn.com/2024/10/14/sport/nfl-week-6-sunday-review-spt-intl/index.html", urlToImage: nil, publishedAt: nil, content: ArticleUtilities.shared.generateLoremText(wordCount: 200))))
 }

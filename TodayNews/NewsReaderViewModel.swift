@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class NewsReaderViewModel: ObservableObject, ArticleUtilities {
+class NewsReaderViewModel: ObservableObject {
 	var article: Article
 	
 	

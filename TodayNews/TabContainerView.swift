@@ -13,9 +13,16 @@ import SwiftUI
 struct TabContainerView: View {
 	var body: some View {
 		TabView {
-			NewsFeedView()
+			NewsFeedView(viewModel: NewsFeedViewModel())
 				.tabItem {
 					Text("News Feed")
+						.font(.title)
+						.foregroundStyle(.black)
+						.tint(.black)
+				}
+			SearchNewsView()
+				.tabItem {
+					Text("Search News")
 						.font(.title)
 						.foregroundStyle(.black)
 						.tint(.black)

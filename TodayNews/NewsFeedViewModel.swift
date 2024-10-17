@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class NewsFeedViewModel: ObservableObject, ArticleUtilities {
+class NewsFeedViewModel: ObservableObject {
 	@Published var pageTitle = "Latest"
 	@Published var seeMoreBtnTitle = "See all"
 	@Published var categories: [String] = []
@@ -63,13 +63,14 @@ class NewsFeedViewModel: ObservableObject, ArticleUtilities {
 
 
 
-
-protocol ArticleUtilities {
-	func getShortAuthor(_ author: String?) -> String
+class ArticleUtilities {
+	static let shared = ArticleUtilities()
+	private init() {}
 }
 
 extension ArticleUtilities {
 	func getShortAuthor(_ author: String?) -> String {
+		
 		if let author {
 			let this = "\(author.prefix(6))".replacingOccurrences(of: #"[-!@$#%^&*()_+=]"#, with: "", options: .regularExpression)
 			return this

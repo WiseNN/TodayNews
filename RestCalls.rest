@@ -1,0 +1,28 @@
+# https://newsapi.org/v2/top-headlines?country=us&apiKey=f79971a0373d405c8de63ed005117b88
+
+
+
+
+struct Articles: Codable {
+    var article: [Articles]
+}
+struct Article: Codable {
+    var source: Source
+    var author: String? 
+    var title: String? 
+    var description: String? 
+    var url: String? 
+    var urlToImage: String? 
+    var publishedAt: String? 
+    var content: String? 
+}
+
+struct Source: Codable {
+    var id: String?
+    var name: String? 
+}
+
+
+
+https://newsapi.org/v2/everything?q=bitcoin&apiKey=f79971a0373d405c8de63ed005117b88
+

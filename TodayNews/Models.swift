@@ -49,3 +49,11 @@ struct Source: Codable {
 	var id: String?
 	var name: String?
 }
+
+
+
+struct ErrorMessage: Decodable {
+	var status: String?
+	var code: String?
+	var message: String?
+}

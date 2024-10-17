@@ -7,32 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "35FADFCE-8905-46F3-9BE7-3EA30F776801"
-            shouldBeEnabled = "Yes"
+            uuid = "FEA8467F-2B07-46DB-9AF9-375AAA382AA1"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WebKit2.swift"
+            filePath = "TodayNews/SearchNewsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "updateUIViewController(_:context:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "searchArticles(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E566CFB-E2B2-4D0F-96F4-B09B7D013E73"
+            uuid = "A9E06838-232F-40A2-914D-CD89E096B88C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WebKit2.swift"
+            filePath = "TodayNews/SearchNewsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "sizeThatFits(_:uiViewController:context:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "searchArticles(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4D18F86-6128-4024-AE71-C087D9D02C6B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodayNews/SearchNewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "searchArticles(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
