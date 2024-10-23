@@ -10,4 +10,4 @@ At the moment users are able to read featured news content from various publishe
 - [ ] Advamced Search Query 
 - [ ] Selectable news categories in News Feed View
 
-![hippo](./TodayNews_Demo_HD.gif)
+![hippo](./TodayNews_Demo_SD.gif)
