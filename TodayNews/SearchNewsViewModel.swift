@@ -42,7 +42,7 @@ class SearchNewsViewModel: ObservableObject {
 				}
 				let articles = try JSONDecoder().decode(Articles.self, from: data)
 				DispatchQueue.main.async {
-					self.articles = articles.articlesAry
+					self.articles = articles.articlesAry.filter { $0.urlToImage != nil }
 				}
 			} catch let err {
 				print("Search Error: \(err)")

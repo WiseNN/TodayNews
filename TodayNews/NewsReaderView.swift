@@ -55,7 +55,7 @@ struct NewsReaderView: View {
 				Image("newsStoryImage")
 					.aspectRatio(2/1, contentMode: .fill)
 				HStack {
-					Text(ArticleUtilities.shared.getShortAuthor(viewModel.article.author))
+					Text(ArticleUtilities.shared.getMidLongAuthor(viewModel.article.author))
 						.font(.custom("Poppins", size: 18))
 						.foregroundStyle(.gray)
 					Spacer()

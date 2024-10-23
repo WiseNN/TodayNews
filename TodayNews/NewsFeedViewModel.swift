@@ -33,14 +33,11 @@ class NewsFeedViewModel: ObservableObject {
 					return
 				}
 				if let articles = try? JSONDecoder().decode(Articles.self, from: data) {
-					
 					DispatchQueue.main.async {
-						self.articles = articles.articlesAry
+						self.articles = articles.articlesAry.filter { $0.urlToImage != nil }
 					}
-					
 				} else {
 					let errMsg = NewsAPIError.clientError("Could not parse data").description
-					
 					DispatchQueue.main.async {
 						self.errMsg = errMsg
 						self.hasError = .constant(true)
@@ -69,8 +66,15 @@ class ArticleUtilities {
 }
 
 extension ArticleUtilities {
+	func getMidLongAuthor(_ author: String?) -> String {
+		if let author {
+			let this = "\(author.prefix(12))".replacingOccurrences(of: #"[-!@$#%^&*()_+=]"#, with: "", options: .regularExpression)
+			return this
+		} else {
+			return "Unlisted"
+		}
+	}
 	func getShortAuthor(_ author: String?) -> String {
-		
 		if let author {
 			let this = "\(author.prefix(6))".replacingOccurrences(of: #"[-!@$#%^&*()_+=]"#, with: "", options: .regularExpression)
 			return this
