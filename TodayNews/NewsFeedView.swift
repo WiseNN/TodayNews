@@ -56,12 +56,19 @@ struct NewsFeedView: View {
 				}
 			}
 			.padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
-			
-			
-			List(viewModel.articles) { article in
-				
-				NewsFeedCellView(article: article)
-				.frame(height: 112)
+			NavigationView {
+				List(viewModel.articles) { article in
+						NavigationLink {
+							if let _ = article.url {
+								NewsReaderView(viewModel: NewsReaderViewModel(article: article))
+							} else {
+								Text("Sorry, this article is not present")
+							}
+						} label: {
+							NewsFeedCellView(article: article)
+						}
+					.frame(height: 112)
+				}
 			}
 			.refreshable {
 				Task {

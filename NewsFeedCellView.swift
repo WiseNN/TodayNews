@@ -49,6 +49,7 @@ struct NewsFeedCellView: View {
 				
 				
 			}
+			Spacer()
 		}
 		.frame(maxWidth: .infinity)
 	}
