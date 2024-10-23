@@ -16,7 +16,7 @@ struct NewsFeedCellView: View {
 		HStack {
 			
 			CachedAsyncImage(url: URL(string: article.urlToImage ?? ""), urlCache: .imageCache) { img in
-				let image = img.image ?? Image("bbcNewsImage")
+				let image = img.image ?? Image("newsIcon")
 
 				image
 					.resizable()
